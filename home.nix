@@ -43,7 +43,9 @@
     # Operations
     ghostty
     filezilla
-    
+    localsend
+    mullvad-browser
+
     # PrivSec
     veracrypt
     mullvad-vpn
