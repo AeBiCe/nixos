@@ -20,6 +20,9 @@
   home.packages = with pkgs; [
     # Utils
     htop
+    yazi
+    fzf
+    eza
     tree
     solaar
     fastfetch
@@ -55,6 +58,7 @@
     vim
     python3 
     devenv
+    vscode
 
     # Video
     vlc
