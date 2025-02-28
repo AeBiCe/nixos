@@ -47,7 +47,10 @@
   
   # Enables Flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+ 
+  # Define trusted users for devenv to automatically manage binary caches
+  nix.settings.trusted-users = [ "root" "n5" ];
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
