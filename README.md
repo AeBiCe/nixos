@@ -10,6 +10,8 @@ My configuration for NixOs
 - [ ] Add dotfiles
 - [ ] Setup a better development environment
 - [ ] Look into add / configuring a security based profile
+- [ ] Break out the contents of home.nix and configuration.nix
+- [ ] Investigate [Impermanence](https://github.com/nix-community/impermanence)
 
 # Credit
 A big thank you to to [Ryan Yin](https://github.com/ryan4yin) for his great book on Nix and Flakes, which can be found here: https://github.com/ryan4yin/nixos-and-flakes-book
