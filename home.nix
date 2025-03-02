@@ -14,7 +14,9 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-  
+
+  # Enable custom fonts config
+  fonts.fontconfig.enable = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -29,8 +31,8 @@
     popsicle
     ffmpeg
     obsidian
+    czkawka
 
-    
     # Desktop utils
     waybar
     rofi
@@ -42,7 +44,7 @@
     # Archives
     zip
     unzip
-   
+
     # Operations
     ghostty
     filezilla
@@ -56,12 +58,15 @@
 
     # Development
     vim
-    python3 
+    python3
     devenv
     vscode
 
     # Video
     vlc
+
+    # Fonts
+    font-awesome
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -76,13 +81,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-
-    programs = {
-      neovim = {
-        enable = true;
-        defaultEditor = true;
-      };
-    };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -115,9 +113,7 @@
   #
   #  /etc/profiles/per-user/n5/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

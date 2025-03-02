@@ -5,10 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -16,7 +15,8 @@
   boot.supportedFilesystems = [ "ntfs" ];
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
-  boot.initrd.luks.devices."luks-c62a52e5-ae0f-4516-8390-0e246d53859c".device = "/dev/disk/by-uuid/c62a52e5-ae0f-4516-8390-0e246d53859c";
+  boot.initrd.luks.devices."luks-c62a52e5-ae0f-4516-8390-0e246d53859c".device =
+    "/dev/disk/by-uuid/c62a52e5-ae0f-4516-8390-0e246d53859c";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -44,10 +44,10 @@
     LC_TELEPHONE = "sv_SE.UTF-8";
     LC_TIME = "sv_SE.UTF-8";
   };
-  
+
   # Enables Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
- 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Define trusted users for devenv to automatically manage binary caches
   nix.settings.trusted-users = [ "root" "n5" ];
 
@@ -89,7 +89,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
   #Enable Logitech wireless protocol
   hardware.logitech.wireless.enable = true;
 
@@ -98,8 +97,8 @@
     isNormalUser = true;
     description = "n5";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+    shell = pkgs.zsh;
+    packages = with pkgs; [ ];
   };
 
   # Mullvad VPN
@@ -114,13 +113,31 @@
   # Enable Hyprland
   programs.hyprland.enable = true;
 
+  programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      # autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+        enable = true;
+        plugins = [ ];
+        theme = "arrow";
+      };
+    };
+  };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      #  wget
+      git
+    ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
