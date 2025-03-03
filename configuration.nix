@@ -121,8 +121,9 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      # autosuggestions.enable = true;
+      enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
+      shellAliases = { ls = "eza"; };
       ohMyZsh = {
         enable = true;
         plugins = [ ];
@@ -132,12 +133,12 @@
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs;
-    [
-      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      #  wget
-      git
-    ];
+  environment.systemPackages = with pkgs; [
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    git
+    nixfmt-classic
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
