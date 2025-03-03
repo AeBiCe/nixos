@@ -60,6 +60,7 @@
     vim
     python3
     devenv
+    direnv
     vscode
 
     # Video
