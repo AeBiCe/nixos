@@ -11,7 +11,11 @@
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./hosts/desktop/default.nix ];
+        modules = [
+          ./hosts/desktop/default.nix
+          home-manager.nixosModules.home-manager
+
+        ];
       };
     };
   };
