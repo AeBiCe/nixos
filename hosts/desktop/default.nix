@@ -7,6 +7,10 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/common.nix
+    ../../modules/networking.nix
+    ../../modules/services/default.nix
+    home-manager.nixosModules.home-manager
   ];
 
   # Bootloader.
@@ -24,12 +28,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Stockholm";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -44,9 +42,6 @@
     LC_TELEPHONE = "sv_SE.UTF-8";
     LC_TIME = "sv_SE.UTF-8";
   };
-
-  # Enables Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Define trusted users for devenv to automatically manage binary caches
   nix.settings.trusted-users = [ "root" "n5" ];
@@ -144,6 +139,12 @@
     git
     nixfmt-classic
   ];
+
+  # Home manager
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
+  home-manager.users.n5 = import ../../home-manager/users/n5/home.nix;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
