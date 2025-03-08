@@ -83,7 +83,6 @@
 
   # Enable Hyprland
   programs.hyprland.enable = true;
-
   programs = {
     neovim = {
       enable = true;
@@ -92,7 +91,7 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      enableAutosuggestions = true;
+      autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = { ls = "eza"; };
       ohMyZsh = {
