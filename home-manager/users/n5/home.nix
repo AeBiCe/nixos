@@ -67,11 +67,14 @@
     # Video
     vlc
 
+    # Gaming
+    steam
+    heroic
+    mangohud
+    gamescope
+
     # Fonts
     font-awesome
-    
-    # Gaming
-    heroic
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
