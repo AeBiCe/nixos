@@ -81,6 +81,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Steam
+  programs.steam.enable = true;
   # Enable Hyprland
   programs.hyprland.enable = true;
   programs = {

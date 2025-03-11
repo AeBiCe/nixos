@@ -68,7 +68,6 @@
     vlc
 
     # Gaming
-    steam
     heroic
     mangohud
     gamescope
