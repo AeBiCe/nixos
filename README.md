@@ -12,6 +12,8 @@ My configuration for NixOs
 - [ ] Setup a better development environment
 - [ ] Look into add / configuring a security based profile
 - [ ] Investigate [Impermanence](https://github.com/nix-community/impermanence)
+- [ ] Setup CI for automated upgrade of flake.lock. Testing should be a part of the CI.
+- [ ] Setup a binary cache for faster upgrade
 
 # Repositories for inspiration
 - https://github.com/Misterio77/nix-config
@@ -21,6 +23,6 @@ My configuration for NixOs
 - https://github.com/Athena-OS
 	- Seems great for a Kali Linux alternative
 
-
 # Credit
-A big thank you to to [Ryan Yin](https://github.com/ryan4yin) for his great book on Nix and Flakes, which can be found here: https://github.com/ryan4yin/nixos-and-flakes-book
+- Huge credit to my dear friend [Emil](https://github.com/emilhem) that introduces me to the Nix jungle. Linux has never been this fun.
+- A big thank you to to [Ryan Yin](https://github.com/ryan4yin) for his great book on Nix and Flakes which was an immense help to get started. The book can be found here: https://nixos-and-flakes.thiscute.world/
