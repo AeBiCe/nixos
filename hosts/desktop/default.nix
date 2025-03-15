@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../modules/common.nix
     ../../modules/networking.nix
+    ../../modules/fonts.nix
   ];
 
   # Bootloader.
