@@ -7,18 +7,25 @@
 #
 ############################################################################
 
-rebuild:
-  sudo nixos-rebuild switch --flake .#desktop
+default:
+  just --list --unsorted
 
-debug:
-  sudo nixos-rebuild switch --flake .#desktop --show-trace --verbose
 
+rebuild host='desktop':
+  @echo 'Rebuilding based on {{host}} configuration'
+  sudo nixos-rebuild switch --flake .#{{host}}
+
+debug host='desktop':
+  sudo nixos-rebuild switch --flake .#{{host}} --show-trace --verbose
+
+[doc('flake update')]
 up:
   nix flake update
 
 history:
   nix profile history --profile /nix/var/nix/profiles/system
 
+[doc('Removed profiles older than 7d')]
 clean:
   # remove all generations older than 7 days
   sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
