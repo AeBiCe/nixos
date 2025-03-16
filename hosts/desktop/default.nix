@@ -105,7 +105,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ git nixfmt-classic ];
+  environment.systemPackages = with pkgs; [ git nixfmt-classic just ];
 
   # Home manager
   home-manager.useGlobalPkgs = true;
