@@ -8,12 +8,14 @@ My configuration for NixOs
 - [x] Split the configuration in better way.
 - [x] Break out the contents of home.nix and configuration.nix
 - [ ] Add [Sops-nix](https://github.com/Mic92/sops-nix) to sensitive parts of the config. 
+- [ ] Separate DE (Hyprland and GNOME) configs
 - [ ] Add dotfiles
+- [ ] Harden the OS (CIS?)
 - [ ] Setup a better development environment
-- [ ] Look into add / configuring a security based profile
+- [ ] Look into add / configuring a security based profile for pentesting and forensics
 - [ ] Investigate [Impermanence](https://github.com/nix-community/impermanence)
 - [ ] Setup CI for automated upgrade of flake.lock. Testing should be a part of the CI.
-- [ ] Setup a binary cache for faster upgrade
+- [ ] Setup a binary cache or investigate [cachix](https://www.cachix.org/)
 
 # Repositories for inspiration
 - https://github.com/Misterio77/nix-config
