@@ -6,6 +6,7 @@
     ../../modules/common.nix
     ../../modules/networking.nix
     ../../modules/fonts.nix
+    ../../modules/gnome.nix
   ];
 
   # Bootloader.
@@ -23,17 +24,10 @@
   # Define trusted users for devenv to automatically manage binary caches
   nix.settings.trusted-users = [ "root" "n5" ];
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   #Nvidia Settings
   hardware.graphics.enable = true;
   hardware.nvidia.open = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
