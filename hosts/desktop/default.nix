@@ -7,6 +7,7 @@
     ../../modules/networking.nix
     ../../modules/fonts.nix
     ../../modules/gnome.nix
+    ../../modules/programs
   ];
 
   # Bootloader.
@@ -75,29 +76,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Steam
-  programs.steam.enable = true;
-  # Enable Hyprland
-  programs.hyprland.enable = true;
-  programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
-      shellAliases = { ls = "eza"; };
-      ohMyZsh = {
-        enable = true;
-        plugins = [ ];
-        theme = "arrow";
-      };
-    };
-  };
 
   environment.systemPackages = with pkgs; [ git nixfmt-classic just ];
 
