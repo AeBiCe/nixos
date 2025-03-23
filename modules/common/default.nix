@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [ ./fonts.nix ./networking.nix ];
+
   # Enables Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

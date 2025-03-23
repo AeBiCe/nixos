@@ -3,9 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/common.nix
-    ../../modules/networking.nix
-    ../../modules/fonts.nix
+    ../../modules/common
     ../../modules/gnome.nix
     ../../modules/programs
   ];
