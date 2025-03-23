@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
 
   imports = [ ./fonts.nix ./networking.nix ];
