@@ -7,36 +7,36 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot.initrd.availableKernelModules =
-    [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+    [ "xhci_pci" "nvme" "ahci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/28ec3909-894c-44f0-809c-b6191ab6a54a";
+    device = "/dev/disk/by-uuid/5e8e414a-6dc2-4434-a844-f4f84bdff2b2";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-be7110a9-fcef-4a71-bab9-9375031231f5".device =
-    "/dev/disk/by-uuid/be7110a9-fcef-4a71-bab9-9375031231f5";
+  boot.initrd.luks.devices."luks-25ff70d4-c484-4459-92fc-ba8475753f59".device =
+    "/dev/disk/by-uuid/25ff70d4-c484-4459-92fc-ba8475753f59";
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/B3B6-7D63";
+    device = "/dev/disk/by-uuid/6BB7-21AC";
     fsType = "vfat";
     options = [ "fmask=0077" "dmask=0077" ];
   };
 
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/efa31df9-abc0-4171-a1d1-f8e7892bc41b"; }];
+    [{ device = "/dev/disk/by-uuid/502778cb-27ff-4475-9314-624471397fb7"; }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp4s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp115s0f4u1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode =
+  hardware.cpu.amd.updateMicrocode =
     lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

@@ -16,8 +16,8 @@
   boot.supportedFilesystems = [ "ntfs" ];
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
-  boot.initrd.luks.devices."luks-c62a52e5-ae0f-4516-8390-0e246d53859c".device =
-    "/dev/disk/by-uuid/c62a52e5-ae0f-4516-8390-0e246d53859c";
+  boot.initrd.luks.devices."luks-423e6fc2-f187-4bfc-803e-beec312d678f".device =
+    "/dev/disk/by-uuid/423e6fc2-f187-4bfc-803e-beec312d678f";
 
   # Network Hostname.
   networking.hostName = "nixos";
