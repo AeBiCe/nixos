@@ -22,6 +22,7 @@
     # Archives
     zip
     unzip
+    rar
 
     # Operations
     ghostty
@@ -33,6 +34,14 @@
     veracrypt
     mullvad-vpn
     keepassxc
+    binwalk
+    nmap
+    nikto
+    wireshark
+    john
+    hashcat
+    lynis
+    vulnix
 
     # Development
     vim

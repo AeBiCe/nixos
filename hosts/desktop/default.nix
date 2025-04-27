@@ -8,7 +8,6 @@
     ../../modules/programs
     ../../modules/peripherals
     ../../modules/services
-    ../../modules/cybersec
   ];
 
   # Bootloader.
