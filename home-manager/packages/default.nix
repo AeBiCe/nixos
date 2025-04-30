@@ -58,5 +58,12 @@
     heroic
     mangohud
     gamescope
+
+    # Kickstart.nvim requirements
+    ripgrep
+    libgcc
+    wl-clipboard
+    xclip
+    fd
   ];
 }
