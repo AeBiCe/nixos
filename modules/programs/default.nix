@@ -14,6 +14,7 @@
       autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = { ls = "eza"; };
+      dotDir = ".config/zsh"
       ohMyZsh = {
         enable = true;
         plugins = [ ];

@@ -22,6 +22,10 @@
   # shell provided by Home Manager. 
   home.sessionVariables = { EDITOR = "nvim"; };
 
+  # Set custom zsh config path
+  programs.zsh.enable = true;
+  programs.zsh.dotDir = ".config/zsh";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
