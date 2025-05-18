@@ -10,6 +10,7 @@
     obsidian
     czkawka
     bat
+    qutebrowser
 
     # Desktop utils
     waybar
@@ -18,6 +19,8 @@
     #Hypr ecosystem
     hyprlock
     hypridle
+    hyprpaper
+    hyprsunset
 
     # Archives
     zip
@@ -42,6 +45,7 @@
     hashcat
     lynis
     vulnix
+    tomb
 
     # Development
     vim
