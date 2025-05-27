@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
 
   imports = [ ../../packages ];
 
@@ -11,11 +9,10 @@
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
   home.stateVersion = "24.11";
-
-  home.file."${config.xdg.configHome}" = {
-    source = ../../../dotfiles;
-    recursive = true;
-  };
+  # home.file."${config.xdg.configHome}" = {
+  #   source = ../../../dotfiles;
+  #   recursive = true;
+  # };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
