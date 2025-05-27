@@ -1,5 +1,15 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    #Fonts
+    fira-code
+    fira-code-symbols
+    font-awesome
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    noto-fonts
+    noto-fonts-emoji
+    nerd-fonts.symbols-only
+
     # Utils
     htop
     yazi
@@ -21,6 +31,7 @@
     hypridle
     hyprpaper
     hyprsunset
+    hyprcursor
 
     # Archives
     zip
@@ -70,4 +81,6 @@
     xclip
     fd
   ];
+
+  fonts.fontconfig.enable = true;
 }

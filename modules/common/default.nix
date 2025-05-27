@@ -1,6 +1,6 @@
 {
 
-  imports = [ ./fonts.nix ./networking.nix ./audio.nix ./graphics.nix ];
+  imports = [ ./networking.nix ./audio.nix ./graphics.nix ];
 
   # Enables Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
