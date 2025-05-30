@@ -1,11 +1,17 @@
 { config, ... }:
 
 {
-  #Nvidia Settings
-  hardware.graphics.enable = true;
-  hardware.nvidia.open = true;
-  hardware.nvidia.package =
-    config.boot.kernelPackages.nvidiaPackages.production;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
 
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    nvidiaSettings = true;
+    open = false;
+    prime = {
+      offload.enable = true;
+      amdgpuBusId = "PCI:73:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
 }
