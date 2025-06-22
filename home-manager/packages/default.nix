@@ -20,7 +20,7 @@
     obsidian
     czkawka
     bat
-    qutebrowser
+    # qutebrowser
 
     # Desktop utils
     waybar
