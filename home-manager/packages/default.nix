@@ -20,6 +20,7 @@
     obsidian
     czkawka
     bat
+    brave
     # qutebrowser
 
     # Desktop utils
