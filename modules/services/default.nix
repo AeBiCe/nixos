@@ -5,4 +5,10 @@
 
   # Disable CUPS.
   services.printing.enable = false;
+
+  # Enable Ollama
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
 }

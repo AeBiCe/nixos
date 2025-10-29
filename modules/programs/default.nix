@@ -22,6 +22,7 @@
     };
 
     steam.enable = true;
+    gamemode.enable = true;
     hyprland.enable = true;
   };
 }

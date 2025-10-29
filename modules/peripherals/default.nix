@@ -13,5 +13,5 @@
       vial
     ]; # packages
 
-  }; # udev
+  };
 }

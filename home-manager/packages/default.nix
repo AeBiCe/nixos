@@ -1,27 +1,27 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    #Fonts
-    fira-code
-    fira-code-symbols
-    font-awesome
-    liberation_ttf
-    mplus-outline-fonts.githubRelease
-    noto-fonts
-    noto-fonts-emoji
-    nerd-fonts.symbols-only
 
     # Utils
-    htop
+    wiremix
+    btop-cuda
     yazi
     fzf
     eza
-    solaar
     fastfetch
-    obsidian
-    czkawka
     bat
-    brave
-    # qutebrowser
+    quickemu
+    ripgrep
+    wl-clipboard
+    fd
+
+    # Graphical Utils
+    solaar
+    czkawka
+
+    # Graphics
+    vulkan-tools
+    vulkan-loader
+    mesa
 
     # Desktop utils
     waybar
@@ -44,19 +44,15 @@
     filezilla
     mullvad-browser
     librewolf
+    qutebrowser
+    brave
+    obsidian
+    heroic
 
     # PrivSec
     veracrypt
     mullvad-vpn
     keepassxc
-    binwalk
-    nmap
-    nikto
-    wireshark
-    john
-    hashcat
-    lynis
-    vulnix
     tomb
 
     # Development
@@ -66,21 +62,25 @@
     direnv
     vscode
 
+    # Gaming
+    gamemode
+    mangohud
+
     # Video
     ffmpeg
     vlc
+    mpv
 
-    # Gaming
-    heroic
-    mangohud
-    gamescope
+    #Fonts
+    fira-code
+    fira-code-symbols
+    font-awesome
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    noto-fonts
+    noto-fonts-emoji
+    nerd-fonts.symbols-only
 
-    # Kickstart.nvim requirements
-    ripgrep
-    libgcc
-    wl-clipboard
-    xclip
-    fd
   ];
 
   fonts.fontconfig.enable = true;
