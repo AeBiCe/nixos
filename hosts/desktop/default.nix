@@ -20,6 +20,12 @@
   boot.initrd.luks.devices."luks-423e6fc2-f187-4bfc-803e-beec312d678f".device =
     "/dev/disk/by-uuid/423e6fc2-f187-4bfc-803e-beec312d678f";
 
+  fileSystems."/home/n5/data" = {
+    device = "/dev/disk/by-uuid/d82c4e39-72a1-4408-ace8-9db2ea8c5f35";
+    fsType = "ext4";
+    options = [ "noatime" "nodev" "nosuid" ];
+  };
+
   # Network Hostname.
   networking.hostName = "nixos";
 
