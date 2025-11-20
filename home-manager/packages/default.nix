@@ -3,6 +3,7 @@
 
     # Utils
     wiremix
+    bluetui
     btop-cuda
     yazi
     fzf
@@ -13,6 +14,8 @@
     ripgrep
     wl-clipboard
     fd
+    fuzzel
+    alacritty
 
     # Graphical Utils
     solaar
@@ -51,7 +54,7 @@
 
     # PrivSec
     veracrypt
-    mullvad-vpn
+    mullvad
     keepassxc
     tomb
 
@@ -78,8 +81,9 @@
     liberation_ttf
     mplus-outline-fonts.githubRelease
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.symbols-only
+    montserrat
 
   ];
 

@@ -7,7 +7,7 @@
     modesetting.enable = true;
     powerManagement.enable = true;
     nvidiaSettings = true;
-    open = false;
+    open = true;
     prime = {
       offload.enable = true;
       amdgpuBusId = "PCI:73:0:0";
